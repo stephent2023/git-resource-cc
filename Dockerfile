@@ -17,7 +17,10 @@ RUN apt install -y --no-install-recommends \
     g++ \
     openssh-client \
     libstdc++6 \
-    software-properties-common
+    software-properties-common \
+    pip
+
+RUN pip install git-remote-codecommit
 
 WORKDIR /root
 RUN git clone https://github.com/proxytunnel/proxytunnel.git && \
